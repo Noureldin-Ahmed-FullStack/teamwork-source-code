@@ -15,7 +15,7 @@ export default function NavbarComponent() {
                     <div className="navbar-nav ms-auto">
                         <NavLink className="nav-link" to="FATIMA">FATIMA</NavLink>
                         <NavLink className="nav-link" to="PASSANT">PASSANT</NavLink>
-                        {/* <NavLink className="nav-link" to="contact" >CONTACT</NavLink> */}
+                        <NavLink className="nav-link" to="MOHAMED-HAMDY" >MOHAMED HAMDY</NavLink>
                     </div>
                 </div>
             </div>
