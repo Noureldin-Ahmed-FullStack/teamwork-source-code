@@ -1,0 +1,29 @@
+.axis{
+    margin-top: 20px;
+    background-color: green ;
+    height: 100px;
+    width: 200px;
+
+}
+/***************************************/
+.app{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35vh;
+  }
+  .btn1{
+    padding: 20px 40px;
+    border: none;
+    background-color: blue;
+    color: white;
+    border-radius: 5px;
+    margin-right: 20px;
+    cursor: pointer;
+  }
+  .NUMBER{
+    margin-right: 20px;
+  }
+  .Red{
+   color: red;
+  }

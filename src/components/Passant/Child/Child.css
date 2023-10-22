@@ -1,0 +1,16 @@
+.items{
+    position: relative;
+    background-color: white;
+    border: 2px solid white;
+    margin-bottom: 10px;
+}
+
+.c1{
+background-color: rgb(255, 0, 0);
+position: absolute;
+top: 0;
+right: 0;
+color: white;
+padding: 10px;
+border-radius: 50%;
+}

@@ -1,24 +1,37 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import './MyCss/MyCustomStylesheet.css';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import '../node_modules/bootstrap/dist/js/bootstrap.bundle.js';
+import { RouterProvider, createHashRouter } from "react-router-dom"
+import Layout from './components/Layout';
+import Main from './components/Main';
+import Parent from './components/Fatima/Parent';
+import PassantParent from './components/Passant/PasParent/PassantParent';
+// import Parent from './components/Passant/PasParent/PassantParent';
+
 
 function App() {
+  let Routes = createHashRouter([
+
+    {
+      path: "/", element: <Layout />, children: [
+        { path: "", element: <Main /> },
+        { path: "home", element: <Main /> },
+        { path: "fatima", element: <Parent /> },
+        { path: "Passant", element: <PassantParent /> },
+        // { path: "home", element: <Main /> },
+        // { path: "portfolio", element: <Portfolio /> },
+        // { path: "about", element: <About /> },
+        // { path: "contact", element: <Contact /> },
+        { path: "*", element: <h2>404</h2> },
+      ]
+    }
+  ])
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <RouterProvider router={Routes} />
     </div>
   );
 }
