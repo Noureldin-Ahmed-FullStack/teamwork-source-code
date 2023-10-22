@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import '../MyCss/MyCustomStylesheet.css'
-import avatarImg from '../images/avatars.svg'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import * as fa from '@fortawesome/free-solid-svg-icons'
-import * as fab from '@fortawesome/free-brands-svg-icons';
+import avatarImg from '../avatars.svg'
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import * as fa from '@fortawesome/free-solid-svg-icons'
+// import * as fab from '@fortawesome/free-brands-svg-icons';
 
 export default class Footer extends Component {
   render() {
@@ -12,27 +12,35 @@ export default class Footer extends Component {
         <div className="container py-4">
           <div className="row py-5">
             <div className="col-md-4 text-center">
-              <h2>Location</h2>
-              <p>2215 John Daniel Drive</p>
-              <p>Clark, MO 65243</p>
+              <h2>React Team members</h2>
+              <table className='myTable'>
+                <tr>
+                  <td>Noureldin Ahmed</td>
+                  <td>Passant</td>
+                </tr>
+                <tr>
+                  <td>Fatima</td>
+                  <td>Mohamed hamdy</td>
+                </tr>
+                <tr>
+                  <td>Mohammed ramadan</td>
+                  <td>Ahmed Bayoumy</td>
+                </tr>
+              </table>
             </div>
             <div className="col-md-4 text-center">
-              <h2 >AROUND THE WEB</h2>
-              <ul className='d-flex list-unstyled justify-content-center align-items-center FooterList mt-3'>
-                <li><FontAwesomeIcon className='' icon={fab.faFacebook} /></li>
-                <li><FontAwesomeIcon className='' icon={fab.faTwitter} /></li>
-                <li><FontAwesomeIcon className='' icon={fab.faLinkedin} /></li>
-                <li><FontAwesomeIcon className='' icon={fa.faGlobe} /></li>
-              </ul>
+              <h2 >AI team members</h2>
+              <p>Samy ahmed</p>
+              <p>Noureldin ahmed (tiny help)</p>
             </div>
             <div className="col-md-4 text-center">
-              <h2>ABOUT FREELANCER</h2>
-              <p>Freelance is free to use</p>
+              <h2>SUPER VISION</h2>
+              <p>DR. Marwa Enany</p>
             </div>
           </div>
         </div>
         <div className="DarktealBG text-center py-3">
-          Copyright © VetRo 2023
+          Copyright © Team 2023
         </div>
 
       </footer>

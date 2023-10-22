@@ -3,10 +3,16 @@ import React, { useEffect, useState } from 'react';
 
 export default function Shake() {
     var [IsShaken, setIsShaken] = useState("false");
+    var [Myvalue, setMyvalue] = useState(0);
+    function inc() {      
+    setMyvalue((prevValue) => prevValue + 1);
+    }
     function change() {
       setIsShaken((prevIsShaken) => (prevIsShaken === "true" ? "false" : "true"));
-      alert(IsShaken);
+      // alert(IsShaken);
+      inc();
     }
+    
 useEffect(() => {
     const handleShake = (event) => {
       // Calculate the total acceleration to detect a shake
@@ -23,6 +29,7 @@ useEffect(() => {
         // Handle the shake event here
         console.log('Device shaken!');
         change()
+        
         // alert("Device shaken!");
       }
     };
@@ -39,6 +46,7 @@ useEffect(() => {
   return (
     <div>
       <h1>{IsShaken}</h1>
+      <h2>{Myvalue}</h2>
       <button className='btn btn-warning ' onClick={change}>click</button>
     </div>
   );
